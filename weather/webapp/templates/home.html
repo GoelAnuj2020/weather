@@ -1,0 +1,25 @@
+Add City
+
+<form action="/" method="post">
+  City name: <input type="text" name="city_name" value=""><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br> <br>
+
+Select City       <br>
+<select id="city_name">
+    {% for city in city_obj %}
+  <option value="{{city.id}}">{{city.name}}</option>
+    {% endfor %}
+</select>
+<br> <br>
+
+
+Select Weather Parameter <br>
+<select id="parameter">
+  <option value="T">Temperature</option>
+    <option value="T">Humidity</option>
+</select>
+
+

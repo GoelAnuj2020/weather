@@ -1,0 +1,65 @@
+Not Found: /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/weather/webapp/urls.py", line 10, in <module>
+    url(r'^$', api_view.Login.as_view()),
+AttributeError: 'module' object has no attribute 'Login'
+Not Found: /api/tes
+Internal Server Error: /api/home/
+Traceback (most recent call last):
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/weather/webapp/apps/api/views.py", line 65, in get
+    return render(request, self.template_name, {'city_obj': city_obj})
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/template/loader.py", line 136, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: home
+Internal Server Error: /api/save-city
+Traceback (most recent call last):
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/middleware/common.py", line 82, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/save-city/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Forbidden (CSRF token missing or incorrect.): /
+Forbidden (CSRF token missing or incorrect.): /
+Not Found: /favicon.ico
+Internal Server Error: /api/weather/
+Traceback (most recent call last):
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/utils/decorators.py", line 29, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/utils/decorators.py", line 25, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/weather/webapp/apps/api/views.py", line 54, in dispatch
+    return super(Weather, self).dispatch(*args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/env_weather/local/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kuliza-247/Desktop/data/projects/weather_project/weather/webapp/apps/api/views.py", line 60, in get
+    weather_url += city
+TypeError: cannot concatenate 'str' and 'NoneType' objects
